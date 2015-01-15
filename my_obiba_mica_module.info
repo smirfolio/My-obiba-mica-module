@@ -1,0 +1,4 @@
+name = "my obiba mica module"
+description = "An example of overriding default Obiba mica template"
+package = Mica
+core = 7.x

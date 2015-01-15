@@ -1,0 +1,11 @@
+<?php
+
+function my_obiba_mica_module_theme_registry_alter(&$theme_registry){
+  dpm($theme_registry);
+  $path_module = drupal_get_path('module', 'my_obiba_mica_module');
+  if(!empty($theme_registry['mica_client_study_list-page'])){
+    dpm($path_module);
+    $theme_registry['mica_client_study_list-page']['path'] = $path_module.'/templates';
+    $theme_registry['mica_client_study_list-page']['theme path'] = $path_module.'/templates';
+  }
+}
